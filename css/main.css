@@ -1,2 +1,12 @@
-/* MAIN.CSS */
-*{ margin: 0;padding: 0; }
+
+.canvaszz {
+	width:100%;
+	background-image: url(../images/bg.jpg) no-repeat;
+	height:707px;
+	position:absolute;
+	z-index:10;
+		filter:alpha(opacity=40);  
+      	-moz-opacity:0.4;  
+      	-khtml-opacity: 0.4;  
+      	opacity: 0.4;
+}
