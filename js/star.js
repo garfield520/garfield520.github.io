@@ -105,7 +105,12 @@ window.onload = function (){
 
 	var oBtn = document.getElementById('btn');
 
-	oBtn.onclick = function (){
-		alert(1);
+	oBtn.onclick = function ( e ){
+		e.stopPropagation();
+		var oAni = document.getElementById('animateBox');
+		var oBtns = document.getElementById('btn');
+
+		document.body.removeChild(oAni);
+		document.body.removeChild(oBtns);
 	}
 }
