@@ -5,14 +5,29 @@
 <title>Document</title>
 <link rel="stylesheet" href="../commen/normalize.css">
 <link rel="stylesheet" href="../commen/commen.css">
+<script>
+	window.onload = function (){
+		var header = document.getElementById('header');
+		var test = document.getElementById('test');
+
+		test.onclick = function (){
+			header.style.height = '50px';
+			header.style.padding = '20px';
+			
+			header.removeChild(header.getElementsByTagName('div')[0]);
+			header.removeChild(header.getElementsByTagName('p')[0]);
+		}
+
+	}
+</script>
 </head>
 <body>
-	<div class="header">
+	<div class="header" id="header">
 		<div class="first_title">测试项目test project</div>
 		<p class="second_title">这里是关于这个项目的描述 test project</p>
 		<a class="btn" target="_blank" href="https://github.com/garfield520/garfield520.github.io">View on Github</a>
 		<a class="btn" href="https://github.com/garfield520/garfield520.github.io/archive/master.zip">Download .Zip</a>
-		<a class="btn" target="_blank" href="javascript:;">Download .tar.gz</a>
+		<a class="btn" target="_blank" href="javascript:;" id="test">Download .tar.gz</a>
 	</div>
 </body>
 </html>

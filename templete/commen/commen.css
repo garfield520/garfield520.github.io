@@ -8,6 +8,7 @@
 	color: #fff;
 	background-image: linear-gradient(140deg, #155799, purple);
 	font-family: 'Times New Roman', '宋体';
+	transition: height 0.8s, padding 0.8s;
 }
 
 .header .first_title {
