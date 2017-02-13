@@ -1,5 +1,10 @@
 
-window.onload = function (){
+function star (){
+	var starBox = document.createElement('div');
+	starBox.id = starBox;
+	starBox.style.position = 'relative';
+	starBox.innerHTML = '<div class="canvaszz"></div><canvas id="canvas">YOUR BROWSER DO NOT SUPPORT CANVAS</canvas>';
+	document.body.appendChild(starBox);
 
 	var canvas = document.getElementById('canvas');
 
@@ -12,7 +17,7 @@ window.onload = function (){
 		hue = 217;
 		stars = [];
 		count = 0;
-		maxStars = 1000;
+		maxStars = 100;
 
 	var canvas2 = document.createElement('canvas');
 	var ctx2 = canvas2.getContext('2d');
@@ -87,11 +92,13 @@ window.onload = function (){
 	}
 
 	function animation() {
+		//	在目标图像上显示源图像
 		ctx.globalCompositeOperation = 'source-over';
 		ctx.globalAlpha = 0.5;
-		ctx.fillStyle = 'hsla(' + hue + ', 64%, 6%, 2)';
+		ctx.fillStyle = 'hsla(' + hue + ', 60%, 10%, 2)';
 		ctx.fillRect(0, 0, w, h)
 
+		//	显示源图像+目标图像
 		ctx.globalCompositeOperation = 'lighter';
 		for (var i = 1, l = stars.length; i < l; i++) {
 			stars[i].draw();
@@ -101,16 +108,4 @@ window.onload = function (){
 	}
 
 	animation();
-
-
-	var oBtn = document.getElementById('btn');
-
-	oBtn.onclick = function ( e ){
-		e.stopPropagation();
-		var oAni = document.getElementById('animateBox');
-		var oBtns = document.getElementById('btn');
-
-		document.body.removeChild(oAni);
-		document.body.removeChild(oBtns);
-	}
 }
