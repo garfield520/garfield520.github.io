@@ -12,7 +12,7 @@ function star (){
 
 	var w, h, hue, starts, count, maxStarts;
 		w = canvas.width = document.documentElement.clientWidth;
-		h = canvas.height = document.documentElement.clientHeight - 3;
+		h = canvas.height = document.documentElement.clientHeight - 4;
 
 		hue = 217;
 		stars = [];

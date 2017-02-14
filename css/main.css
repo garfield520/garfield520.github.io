@@ -12,6 +12,7 @@
 
 body {
 	background: url('../images/bg-02.jpg');
+	background-attachment: fixed;
 	background-size: 100%;
 	font-family: 'times new roman', '宋体';
 	min-width: 1000px;
@@ -66,12 +67,14 @@ li {
 	color: rgba(200, 200, 200, 0.8);
 	background: rgba(100, 100, 100, 0.1);
 	transition: 0.5s;
+	transition: transform 0.2s;
 }
 
 .header ul li:hover {
 	border-color: rgba(255, 255, 255, 0.9);
 	background: rgba(200, 200, 200, 0.2);
-	color: rgba(255, 255, 255, 1);	
+	color: rgba(255, 255, 255, 1);
+	transform: scale(1.1);
 }
 .header ul li.active {
 	border-color: rgba(255, 255, 255, 0.9);
@@ -98,7 +101,7 @@ li {
 	float: left;
 }
 .content_left .face{
-	padding-top: 10px;
+	padding-top: 30px;
 	text-align: center;
 }
 .content_left .face img {
@@ -109,15 +112,16 @@ li {
 	text-align: center;
 	font-size: 20px;
 }
-.profileInfo p{
-	transition: 2s;
+.profileInfo p {
+	transition: 2s linear;
 }
 .profileInfo p:hover {
 	transform:rotateY(360deg);
 	-ms-transform:rotateY(360deg); 	/* IE 9 */
 	-moz-transform:rotateY(360deg); 	/* Firefox */
 	-webkit-transform:rotateY(360deg); /* Safari 和 Chrome */
-	-o-transform:rotateY(360deg); 
+	-o-transform:rotateY(360deg);
+	color: orange;
 }
 .profileInfo .profile_intruduce {
 	padding: 30px;
@@ -129,10 +133,68 @@ li {
 	padding-left:500px;
 	padding-right: 50px;
 	color: rgba(255, 255, 255, 1);
+	margin-bottom:20px;
 }
-.content .content_right div {
+.content .content_right .profile_content {
 	width: 100%;
 	background: rgba(0, 0, 0, 0.6);
 	border-radius: 10px;
 	min-width: 500px;
+	padding-bottom: 10px;
+}
+.profile_content .title {
+	text-align: center;
+	padding:10px;
+}
+
+.skill {
+	font-size: 20px;
+	margin: 30px 0;
+}
+.skill p {
+	width: 80%;
+	margin: 5px auto;
+}
+
+.profile_content .skill_items {
+	background: -webkit-linear-gradient(left, #48A400, yellow, red);
+	background: -o-linear-gradient(right, #48A400, yellow, red);
+	background: -moz-linear-gradient(right, #48A400, yellow, red);
+	background: linear-gradient(to right, #48A400, yellow, red);
+	text-align: center;
+	width: 80%;
+	height: 15px;
+	margin:0 auto;
+	border-radius: 10px;
+	padding: 5px;
+	color:#000;
+	position: relative;
+}
+.skill_items .items_scale {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width:90%;
+	height: 100%;
+	background: #ccc;
+	border-radius: 0 10px 10px 0;
+	transition: 2s ease;
+}
+.skill_items .items_scale:hover {
+	width: 30%;
+	background: #ccc;
+}
+.skill_items .items_percent {
+	position: absolute;
+	left:50%;
+	top: 2px;
+	color: #000;
+	font-weight: bold;
+}
+
+/* *************** DEMO START ****************** */
+.demo {
+	width: 400px;
+	height: 500px;
+	background: rgba(0, 0, 0, 0.5);
 }
