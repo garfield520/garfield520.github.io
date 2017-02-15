@@ -53,8 +53,12 @@ li {
 
 .header .nav {
 	float: right;
+	height: 100px;
 }
-
+.header .nav ul {
+	height: 100px;
+	padding: 16px;
+}
 .header ul li {
 	float: left;
 	padding:10px;
@@ -100,15 +104,29 @@ li {
 	color: #fff;
 	float: left;
 }
-.content_left .face{
+.content_left .face {
 	padding-top: 30px;
 	text-align: center;
+	transition: 1s;
 }
-.content_left .face img {
+.content_left .face .face_box {
+	width: 150px;
+	height: 150px;
 	border-radius: 50%;
+	margin:0 auto;
 	overflow: hidden;
 }
+.content_left .face .face_box img {
+	border-radius: 50%;
+}
+.content_left .face .face_box>div {
+	transition: 1s;
+}
+.content_left .face .face_box>div:hover {
+	transform: translateY(-150px);
+}
 .content_left .profileInfo {
+	margin-top: 20px;
 	text-align: center;
 	font-size: 20px;
 }
@@ -117,9 +135,9 @@ li {
 }
 .profileInfo p:hover {
 	transform:rotateY(360deg);
-	-ms-transform:rotateY(360deg); 	/* IE 9 */
-	-moz-transform:rotateY(360deg); 	/* Firefox */
-	-webkit-transform:rotateY(360deg); /* Safari 和 Chrome */
+	-ms-transform:rotateY(360deg);
+	-moz-transform:rotateY(360deg);
+	-webkit-transform:rotateY(360deg);
 	-o-transform:rotateY(360deg);
 	color: orange;
 }
@@ -134,63 +152,24 @@ li {
 	padding-right: 50px;
 	color: rgba(255, 255, 255, 1);
 	margin-bottom:20px;
+	/*background: #ccc;*/
 }
-.content .content_right .profile_content {
-	width: 100%;
-	background: rgba(0, 0, 0, 0.6);
-	border-radius: 10px;
-	min-width: 500px;
-	padding-bottom: 10px;
-}
-.profile_content .title {
-	text-align: center;
-	padding:10px;
-}
-
-.skill {
+.content_right .container {
 	font-size: 20px;
-	margin: 30px 0;
+	width: 90%;
+	border-radius: 10px;
+	background: rgba(0, 0, 0, 0.5);
 }
-.skill p {
-	width: 80%;
-	margin: 5px auto;
+.container .itemName {
+	text-align: center;
+}
+.container .progress {
+	margin-top: 10px;
+}
+.progress-bar-skill {
+	background-color: purple;
 }
 
-.profile_content .skill_items {
-	background: -webkit-linear-gradient(left, #48A400, yellow, red);
-	background: -o-linear-gradient(right, #48A400, yellow, red);
-	background: -moz-linear-gradient(right, #48A400, yellow, red);
-	background: linear-gradient(to right, #48A400, yellow, red);
-	text-align: center;
-	width: 80%;
-	height: 15px;
-	margin:0 auto;
-	border-radius: 10px;
-	padding: 5px;
-	color:#000;
-	position: relative;
-}
-.skill_items .items_scale {
-	position: absolute;
-	right: 0;
-	top: 0;
-	width:90%;
-	height: 100%;
-	background: #ccc;
-	border-radius: 0 10px 10px 0;
-	transition: 2s ease;
-}
-.skill_items .items_scale:hover {
-	width: 30%;
-	background: #ccc;
-}
-.skill_items .items_percent {
-	position: absolute;
-	left:50%;
-	top: 2px;
-	color: #000;
-	font-weight: bold;
-}
 
 /* *************** DEMO START ****************** */
 .demo {

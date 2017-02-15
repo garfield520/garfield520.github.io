@@ -4,7 +4,10 @@
 <meta charset="UTF-8">
 <title>GARFIELD'S HOME</title>
 <script src="js/index.js"></script>
+<!-- <link href="http://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"> -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/home.css">
 <link rel="stylesheet" href="css/main.css">
 
 <script src="lib/jquery.min.js"></script>
@@ -33,55 +36,62 @@
 	<div class="content clear home">
 		<div class="content_left">
 			<div class="face">
-				<img width="150" height="150" src="images/face.png" alt="">
+				<div class="face_box">
+					<div>
+						<img width="150" height="150" src="images/face.png" alt="">
+						<img width="150" height="150" src="images/face2.png" alt="">
+					</div>
+				</div>
 			</div>
 			<div class="profileInfo">
 				<p>胡兵 / Garfield</p>
 				<p>前端工程师 / Web Designer</p>
-				<p class="profile_intruduce">一直在追逐一种生活，应付得了眼前的苟且，也承载得了诗和远方。</p>
+				<p class="profile_intruduce">总会有一种生活，应付得了眼前的苟且，也承载得了诗和远方。</p>
 			</div>
 		</div>
+
 		<div class="content_right">
-			<div class="profile_content">
-				<div class="title">
-					<h1>SKILLS</h1>
-				</div>
-				<div class="skill">
-					<p>HTML</p>
-					<div class="skill_items">
-						<div class="items_scale"></div>
-						<div class="items_percent">50%</div>
-					</div>
-				</div>
-				<div class="skill">
-					<p>CSS</p>
-					<div class="skill_items">
-						<div class="items_scale"></div>
-						<div class="items_percent">50%</div>
-					</div>
-				</div>
-				<div class="skill">
-					<p>JAVASCRIPT</p>
-					<div class="skill_items">
-						<div class="items_scale"></div>
-						<div class="items_percent">50%</div>
-					</div>
-				</div>
-				<div class="skill">
-					<p>NODE.JS</p>
-					<div class="skill_items">
-						<div class="items_scale"></div>
-						<div class="items_percent">50%</div>
-					</div>
-				</div>
-				<div class="skill">
-					<p>PHP</p>
-					<div class="skill_items">
-						<div class="items_scale"></div>
-						<div class="items_percent">50%</div>
-					</div>
-				</div>
-			</div>
+			<div class="skill">
+		        <div class="container">
+		        	<div class="itemName">
+		        		<h1>SKILLS</h1>
+		        	</div>
+		            <div class="row">
+		                <div class="col-md-offset-2 col-md-8">
+		               	 	<div class="skill_title">HTML</div>
+		                    <div class="progress">
+		                        <div class="progress-bar progress-bar-info progress-bar-striped active" style="width: 85%;">
+		                            <div class="progress-value">85%</div>
+		                        </div>
+		                    </div>
+							<div class="skill_title">CSS</div>
+		                    <div class="progress">
+		                        <div class="progress-bar progress-bar-success progress-bar-striped active" style="width: 75%;">
+		                            <div class="progress-value">75%</div>
+		                        </div>
+		                    </div>
+							<div class="skill_title">JAVASCRIPT</div>
+		                    <div class="progress">
+		                        <div class="progress-bar progress-bar-warning progress-bar-striped active" style="width: 90%;">
+		                            <div class="progress-value">90%</div>
+		                        </div>
+		                    </div>
+							<div class="skill_title">NODE.JS</div>
+		                    <div class="progress">
+		                        <div class="progress-bar progress-bar-danger progress-bar-striped active" style="width: 60%;">
+		                            <div class="progress-value">60%</div>
+		                        </div>
+		                    </div>
+		                    <div class="skill_title">PHP</div>
+		                    <div class="progress">
+		                        <div class="progress-bar progress-bar-skill progress-bar-striped active" style="width: 60%;">
+		                            <div class="progress-value">60%</div>
+		                        </div>
+		                    </div>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
 		</div>
 	</div>
 
