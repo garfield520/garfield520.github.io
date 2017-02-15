@@ -5,6 +5,7 @@ body {
     font-size:12px;
 }
 #box {
+    height : 500px;
     width: 500px;
     margin:100px auto;
     border: 1px solid #000;
