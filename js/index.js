@@ -6,19 +6,27 @@ requirejs.config({
 	paths : {
 		jquery : 'lib/jquery.min',
 		star : 'js/star',
+		works : 'js/works',
 		home : 'js/home',
-		htmltmpl : 'js/htmltmpl',
 		typeit : 'js/typeit.min',
-		rootScope : 'js/public'
+		rootScope : 'js/public',
+		show : 'js/test'
 	}
 });
-require([
-			'jquery',
-			'rootScope',
-			'home', 
-			'htmltmpl',
-		],
+require(['jquery', 'rootScope'],
 		
-function ( $, rootScope, home, htmltmpl ){
-	home();
+function ( $, rootScope){
+	console.log( rootScope );
+
+	//	init
+
+	$('#home').on('click', function (){
+
+		require(['show'], function ( show ){
+			show.show1();
+		});
+
+	});
+	
+
 });

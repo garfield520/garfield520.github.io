@@ -1,5 +1,5 @@
 'use strict';
-define(['star', 'htmltmpl', 'rootScope', 'typeit'], function ( star, htmltmpl, rootScope ){
+define(['star', 'rootScope', 'typeit'], function ( star, rootScope ){
 	return function (){
 
 		function HomeMod (){
@@ -12,7 +12,7 @@ define(['star', 'htmltmpl', 'rootScope', 'typeit'], function ( star, htmltmpl, r
 
 			init : function (){
 				$('body').css('background', '#0B1628');
-				this.star.init(10);
+				this.star.init(1);
 				// this.showWords();
 
 				//	test
@@ -29,10 +29,9 @@ define(['star', 'htmltmpl', 'rootScope', 'typeit'], function ( star, htmltmpl, r
 					//	change background image
 					rootScope.changeBg('images/bg-02.jpg');
 
-					//	append and show home
-					$('body').append(htmltmpl.header);
-					rootScope.changeNav();
+					$('#header').show();
 				});
+
 			},
 
 			showWords : function (){
