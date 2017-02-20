@@ -6,7 +6,8 @@
 define(['jquery'], function ( $ ){
 	return {
 		changeBg : changeBg,
-		changeNav : changeNav
+		changeNav : changeNav,
+		showCurrent : showCurrent
 	}
 
 	/*
@@ -27,6 +28,18 @@ define(['jquery'], function ( $ ){
 				$(this).addClass('active');
 			});
 		});
+	}
+
+	/*
+	 *	show current content
+	 */
+	function showCurrent ( cur, fn ){
+		var arr = [$('#cameo'), $('#home_text'), $('#home_content'), $('#works_content'), $('#life_content')];
+		for( var i = 0; i < arr.length; i++ ){
+			arr[i].hide();
+		}
+		cur.show();
+		if( fn )fn();
 	}
 
 	

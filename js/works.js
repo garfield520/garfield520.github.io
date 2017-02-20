@@ -1,18 +1,22 @@
 'use strict';
 define(['rootScope'], function ( rootScope ){
-	return function (){
-		function Works (){
-			this.init();
-		}
+	return (function (){
 
-		Works.prototype = {
-			constructor : Works,
+		console.log( 'this is works js' );
 
-			init : function (){
-				
-			}
-		}
+		// $('.duc-img-box')
+		console.log($('.duc-img-box').length);
 
-		new Works();
-	}
+		$('.duc-img-box li').each(function (){
+
+			$(this).on('mouseover', function (){
+				$(this).find('.imgShadow').fadeIn();
+			});
+
+			$(this).on('mouseleave', function (){
+				$(this).find('.imgShadow').fadeOut();
+			});
+		});
+
+	})();
 });

@@ -10,23 +10,16 @@ requirejs.config({
 		home : 'js/home',
 		typeit : 'js/typeit.min',
 		rootScope : 'js/public',
-		show : 'js/test'
+		main : 'js/main',
+		life : 'js/life'
 	}
 });
-require(['jquery', 'rootScope'],
+require(['jquery', 'main'],
 		
-function ( $, rootScope){
-	console.log( rootScope );
+function ( $, main){
 
 	//	init
-
-	$('#home').on('click', function (){
-
-		require(['show'], function ( show ){
-			show.show1();
-		});
-
-	});
+	main();
 	
 
 });
