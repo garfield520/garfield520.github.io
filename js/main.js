@@ -5,7 +5,7 @@ function ( $, rootScope, star, typeit, home, works, life ){
 	return function (){
 
 		//	main start
-		showStar(20);
+		showStar(1000);
 		showWords();
 
 		$('#cameo').on('click', function (){
@@ -52,15 +52,15 @@ function ( $, rootScope, star, typeit, home, works, life ){
 		function showWords (){
 			$('#home_text').show();
 			$('#home_text p').eq(0).typeIt({
-				whatToType: ['徘徊过多少橱窗，'],
+				whatToType: ['总会有一种生活，'],
  				typeSpeed: 150
 			}, function (){
 				$('#home_text p').eq(1).typeIt({
-					whatToType: ['住过多少旅馆，'],
+					whatToType: ['应付得了眼前的苟且，'],
      				typeSpeed: 150
 				}, function (){
 					$('#home_text p').eq(2).typeIt({
-						whatToType: ['才会知道分离也并不冤枉'],
+						whatToType: ['也承载得了诗和远方。'],
 	     				typeSpeed: 150
 					}, function (){
 						$('#cameo').show();
