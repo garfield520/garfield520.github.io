@@ -5,8 +5,9 @@ function ( $, rootScope, star, typeit, home, works, life ){
 	return function (){
 
 		//	main start
-		showStar(1000);
+		showStar(800);
 		showWords();
+		
 
 		$('#cameo').on('click', function (){
 			//	remove start animate
